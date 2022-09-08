@@ -1,0 +1,80 @@
+\documentclass[UTF8]{article}
+\usepackage{ctex}
+\usepackage{pgf,tikz}
+\usetikzlibrary{positioning, arrows.meta}
+\usepackage{tcolorbox}
+\tcbuselibrary{most}
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{xhfill}
+\usepackage{multicol}
+\usepackage{picinpar}
+\usepackage{zhlipsum}
+\usepackage{fancyhdr}
+\usepackage{flowfram}
+\usepackage{parskip}
+\usepackage{overpic}
+\usepackage{fontspec}
+\usepackage{shapepar}
+\usepackage{wrapfig}
+
+
+%设置纸张大小及上下左右边距（可改变）
+\usepackage[paperwidth=325mm, paperheight=507mm,left=0.25cm,right=0.25cm,top=0.2cm,bottom=0.75cm]{geometry}
+
+%控制中文与英文之间的的间隔，这里设置为无间隔
+\xeCJKsetup{CJKecglue={}}
+
+\xeCJKsetup{PunctStyle={banjiao}}
+%设置标点处理格式
+%\xeCJKsetup{PunctStyle={⟨quanjiao|banjiao|kaiming|hangmobanjiao|CCT|plain|...⟩} }
+%导入字体库（可改变）
+\newfontfamily\syhtm{Source Han Sans CN}
+
+%设置纸张风格，这里为设置页眉页脚
+\pagestyle{fancy}
+
+%设置页脚
+\footskip=2pt
+\cfoot{
+	\begin{tcolorbox}[colback=red,boxrule=0pt,width=\textwidth,height=5mm,top=2pt,arc=0pt,outer arc=0pt]
+		\textcolor{white}{\centerline{\fontsize{8}{0}今日金东}}
+	\end{tcolorbox}
+}
+\renewcommand{\headrulewidth}{0pt} 
+\renewcommand{\footrulewidth}{0pt}
+ 
+%设置报头（可改变）
+ \renewcommand{\maketitle}{
+ 	\noindent\includegraphics[width=1\textwidth]{newstitle.png} 
+ 	\vspace{5mm}
+ 	\xhrulefill{red}{2mm}\par
+ 	\vspace{10mm}
+ }
+ 
+%自定义颜色（可改变）
+\definecolor{myred}{RGB}{223,0,43}
+\definecolor{cvblue}{RGB}{223,238,255}
+\definecolor{myblue}{RGB}{0,245,255}
+\definecolor{mypink}{RGB}{ 255,240,245}
+\definecolor{mygrey}{RGB}{ 211,211,211}
+
+%自定义字体（可改变）
+\newcommand{\syht}{\CJKfontspec{Source Han Sans CN}}
+
+%定义tcolorbox,用于调整frame间距，引用时的宽度与高度为frame的宽度与高度
+\newtcolorbox{mytcbox1}[1][]{boxrule=0pt,outer arc=0mm,arc=0mm,boxsep=0mm,left=5mm,right=5mm,top=0pt,bottom=0pt,opacityframe=0pt,opacityback=0pt,enhanced jigsaw,#1}
+
+%定义段落缩进与间距
+%\setlength{\parindent}{2em}
+\setlength{\parskip}{0.0em}
+
+%布局结构（可改变）
+%framelocation
+
+\begin{document}
+	%\showframebboxtrue
+	\maketitle
+	%mainframe
+
+\end{document}
